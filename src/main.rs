@@ -13,11 +13,6 @@ pub extern "C" fn _start() -> ! {
 
     wack_os::init();
 
-    // trigger a page fault
-    unsafe {
-        *(0xdeadbeef as *mut u8) = 42;
-    };
-
     // as before
     #[cfg(test)]
     test_main();

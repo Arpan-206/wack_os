@@ -18,6 +18,6 @@ pub extern "C" fn _start() -> ! {
     loop {}
 }
 #[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
+fn panic(_info: &PanicInfo) -> ! {
     loop {}
 }
