@@ -3,11 +3,11 @@
 #![no_main]
 
 use core::panic::PanicInfo;
-use wack_os::serial_print;
-use wack_os::{exit_qemu, QemuExitCode, serial_println};
-use x86_64::structures::idt::InterruptStackFrame;
 use lazy_static::lazy_static;
+use wack_os::serial_print;
+use wack_os::{QemuExitCode, exit_qemu, serial_println};
 use x86_64::structures::idt::InterruptDescriptorTable;
+use x86_64::structures::idt::InterruptStackFrame;
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
     serial_print!("stack_overflow::stack_overflow...\t");
